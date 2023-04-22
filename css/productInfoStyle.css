@@ -1,0 +1,99 @@
+#productInfo {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bgColor);
+    width: 100%;
+    height: 35rem;
+}
+
+#productInfo div {
+    margin: 1rem;
+}
+
+#productInfo .img {
+    width: 20rem;
+}
+
+#productInfo .img img {
+    width: 100%;
+    height: 20rem;
+}
+#productInfo .img h2{
+    text-align: center;
+    color: white;
+
+
+}
+#productInfo .btn-addCart {
+    background-color: var(--bgColor2);
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 3rem;
+    width: 15rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    transition: .3s ease;
+}
+
+#productInfo .btn-addCart:hover {
+    background-color: green;
+    color: var(--bgColor2);
+}
+
+.info .title {
+    font-size: 30px;
+    text-align: center;
+    color: var(--bgColor2);
+}
+
+.info .details {
+    line-height: 3rem;
+}
+
+.infoProduct {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.infoProduct-title {
+    width: 20rem;
+}
+
+.infoProduct-title > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoProduct input {
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 1rem;
+    width: 20rem;
+height: 3rem;
+}
+.infoProduct .saveComment{
+    background-color: var(--bgColor2);
+    border-radius: 20px;
+    cursor: pointer;
+    width: 10rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    transition: .1s ease-in-out;
+}
+.infoProduct .saveComment:hover{
+    background-color: red;
+    color: var(--bgColor2);
+}
+.info i {
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: green;
+}

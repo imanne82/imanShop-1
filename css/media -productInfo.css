@@ -1,0 +1,6 @@
+@media (max-width: 1126px) {
+    #productInfo {
+overflow: scroll;
+    }
+}
+
