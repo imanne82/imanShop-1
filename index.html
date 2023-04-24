@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/mine.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="icofont/icofont.min.css">
-    <title>Document</title>
+    <title>خانه</title>
 </head>
 <body>
 <div id="container">
@@ -29,14 +29,14 @@
         </div>
         <div class="login">
             <div class="btnLogin">
-                <a href="">ورود / ثبت نام</a><span><i class="icofont-ui-user"></i></span>
+                <a href="registerUser.html">ورود / ثبت نام</a><span><i class="icofont-ui-user"></i></span>
             </div>
         </div>
 
     </header>
     <nav id="navBar">
         <ul class="listMenu">
-            <li><a href="">دسته بندی کالا</a></li>
+            <li><a href="" id="kala">دسته بندی کالا</a></li>
             <li><a href="">پر فروش ترین</a></li>
             <li><a href="">محصولات با تخفیف</a></li>
             <li><a href="">تماس با ما</a></li>
@@ -98,12 +98,25 @@
     <h5>برای افزودن محصول به سبد خرید ثبت نام / ورود کنید</h5>
     <div class="login">
         <div class="btnLogin">
-            <a href="">ورود / ثبت نام</a><span><i class="icofont-ui-user"></i></span>
+            <a href="registerUser.html">ورود / ثبت نام</a><span><i class="icofont-ui-user"></i></span>
         </div>
     </div>
 </div>
 </div>
+<div class="showKala">
+    <div class="menuBar-kala">
+    <span class="spanClosedShow"><i class="icofont-error"></i></span>
+        <ul>
+            <li><a href="#containerProductLapTop">لپ تاپ</a></li>
+            <li><a href="#containerProductRefrigerator">یخچال</a></li>
+            <li><a href="#containerProductCleaner">جارو برقی</a></li>
+        </ul>
+
+
+    </div>
+</div>
 </body>
 <script src="js/sliderScript.js"></script>
 <script src="js/mine.js"></script>
+<script src="js/loader.js"></script>
 </html>

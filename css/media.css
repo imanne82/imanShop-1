@@ -31,6 +31,41 @@
     #navBar {
         display: none;
     }
+
+    .img-price .img img {
+        width: 150px !important;
+        height: 100px !important;
+        border-radius: 0;
+    }
+
+    .existence-discount div {
+        font-size: 15px !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .product {
+        width: 10rem !important;
+        font-size: 10px;
+        height: 17rem !important;
+        display: block;
+    }
+
+    .btn button {
+        margin: 4px !important;
+        padding: 2px !important;
+    }
+
+    .price h3 {
+        margin-top: 5px !important;;
+        width: 4rem !important;
+    }
+
+    .containerProduct {
+        overflow: scroll;
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }
 
 /*       max withe 756                    */

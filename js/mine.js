@@ -1,12 +1,3 @@
-//                   loader            //
-const loader = document.querySelector('.loader-div');
-window.addEventListener('load', () => {
-    loader.classList.add('hidden')
-})
-
-
-
-
 //                  product          //
 
 
@@ -269,18 +260,19 @@ let productLapTop = listProduct.filter(function (product) {
 productLapTop.forEach(function (laptop) {
     templateProduct(containerProductLapTop, laptop)
 })
-let productRefrigerator  = listProduct.filter(function (product){
+let productRefrigerator = listProduct.filter(function (product) {
     return product.grouping === 'refrigerator'
 })
-let productCleaner  = listProduct.filter(function (product){
+let productCleaner = listProduct.filter(function (product) {
     return product.grouping === 'cleaner'
 })
-productRefrigerator.forEach(function (refrigerator){
-    templateProduct(containerProductRefrigerator , refrigerator)
+productRefrigerator.forEach(function (refrigerator) {
+    templateProduct(containerProductRefrigerator, refrigerator)
 })
-productCleaner.forEach(function (cleaner){
-    templateProduct(containerProductCleaner , cleaner)
+productCleaner.forEach(function (cleaner) {
+    templateProduct(containerProductCleaner, cleaner)
 })
+
 function templateProduct(container, product) {
     container.insertAdjacentHTML('beforeend', '            <div class="product">\n' +
         '                <div class="existence-discount">\n' +
@@ -336,3 +328,27 @@ function btnBodyClos(e) {
 
 btnClosedModal.addEventListener('click', btnClosed)
 body.addEventListener('keyup', btnBodyClos)
+
+
+
+//                       //                 دسته بندی کالا
+
+
+
+
+let btnKala = document.querySelector('#kala')
+let showKala = document.querySelector('.showKala')
+let btnClosedShowKala = document.querySelector('.spanClosedShow')
+function showKalaHandler(event) {
+    event.preventDefault()
+    showKala.style.display = 'block'
+    divContainer.style.filter = 'blur(10px)'
+}
+function closedKalaHandler(){
+    showKala.style.display = 'none'
+    divContainer.style.filter = 'blur(0)'
+}
+btnKala.addEventListener('click', showKalaHandler)
+btnClosedShowKala.addEventListener('click', closedKalaHandler)
+
+
