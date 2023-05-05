@@ -1,0 +1,152 @@
+@media (max-width: 450px) {
+    .btnLogin {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .searchBox input {
+        width: 8rem !important;
+        font-size: 10px;
+
+    }
+
+    .searchBox {
+        width: 10rem !important;
+        height: 2rem;
+    }
+
+
+    .img-price .img img {
+        width: 150px !important;
+        height: 100px !important;
+        border-radius: 0;
+    }
+
+    .existence-discount div {
+        font-size: 15px !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .product {
+        width: 10rem !important;
+        font-size: 10px;
+        height: 17rem !important;
+        display: block;
+    }
+
+    .btn button {
+        margin: 4px !important;
+        padding: 2px !important;
+    }
+
+    .price h3 {
+        margin-top: 5px !important;;
+        width: 4rem !important;
+    }
+
+    .containerProduct {
+        overflow: scroll;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+
+}
+
+/*       max withe 600                    */
+@media (max-width: 600px) {
+
+    .btnLogin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .btnLogin a {
+        display: none;
+    }
+
+    #navBar {
+        display: none;
+    }
+
+    .menuBar #showMenuBarMO {
+        display: block;
+    }
+
+    #containerFooter {
+        font-size: 13px;
+    }
+
+    #containerFooter .p a {
+        margin-right: 10px;
+        font-size: 15px;
+    }
+}
+
+
+/*       max withe 756                    */
+@media (max-width: 756px) {
+    .product {
+        width: 14rem;
+        display: block;
+    }
+
+    .existence-discount {
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+        height: 3rem;
+    }
+
+    .img-price .img img {
+        width: 200px;
+        height: 150px;
+        border-radius: 0;
+    }
+
+    .existence-discount div {
+        font-size: 20px;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .menuBar-kala {
+        width: 60%;
+        height: 16rem;
+        right: 16%;
+    }
+}
+
+/*       max width 765 px                */
+@media (max-width: 770px) {
+    #sliderSite img {
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        height: 10rem;
+    }
+
+    #sliderSite {
+        height: 15rem;
+    }
+
+    #sliderSite i {
+        top: 3rem;
+        right: 0;
+    }
+}
+
+@media (min-width: 1537px) {
+    #container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

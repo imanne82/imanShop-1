@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/mine.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="icofont/icofont.min.css">
-    <title>خانه</title>
+    <title>صفحه اصلی</title>
 </head>
 <body>
 <div id="container">
@@ -21,7 +21,30 @@
     </div>
     <header>
         <div class="menuBar">
-            <span><i class="icofont-justify-all"></i></span>
+            <span id="showMenuBarMO"><i class="icofont-justify-all"></i></span>
+            <div class="menuBarMo">
+                <div class="menuMO">
+                    <ul>
+                        <li><a href="">دسته بندی کالا</a>
+                            <ul>
+                                <li><a href="#containerProductLapTop">لپ تاپ</a></li>
+                                <li><a href="#containerProductRefrigerator" class="iman">لوازم برقی</a>
+                                    <ul>
+                                        <li><a href="">یخچال</a></li>
+                                        <li><a href="">جارو برقی</a></li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+
+                        </li>
+                        <li><a href="#showProductDiscount">محصولات با تخفیف</a></li>
+                        <li><a href="">تماس با ما</a></li>
+                        <li><a href="">سوالات پر تکرار</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="searchBox">
             <input type="text" placeholder="محصول خود را پیدا کنید..!">
@@ -32,13 +55,17 @@
                 <a href="registerUser.html">ورود / ثبت نام</a><span><i class="icofont-ui-user"></i></span>
             </div>
         </div>
+        <div class="login">
+            <div class="btnLogin">
+                <a href="registerUser.html">سبد خرید</a><span><i class="icofont-ui-cart"></i></span>
+            </div>
+        </div>
 
     </header>
     <nav id="navBar">
         <ul class="listMenu">
             <li><a href="" id="kala">دسته بندی کالا</a></li>
-            <li><a href="">پر فروش ترین</a></li>
-            <li><a href="">محصولات با تخفیف</a></li>
+            <li><a href="#showProductDiscount">محصولات با تخفیف</a></li>
             <li><a href="">تماس با ما</a></li>
             <li><a href="">سوالات پر تکرار</a></li>
         </ul>
@@ -57,29 +84,37 @@
     <section id="productLapTop" class="section-product">
         <div class="title"><h1>لپ تاپ</h1></div>
         <div id="containerProductLapTop" class="containerProduct">
-<!--            <div class="product">-->
-<!--                <div class="existence-discount">-->
-<!--                    <div class="existence"><span><i class="icofont-check-alt"></i></span></div>-->
-<!--                    <div class="discount"><span>5%</span></div>-->
-<!--                    <div class="like"><span><i class="icofont-heart"></i></span></div>-->
-<!--                </div>-->
-<!--                <div class="img-price">-->
-<!--                    <div class="img">-->
-<!--                        <img src="productImg/kala1.jpg" alt="laptop">-->
-<!--                    </div>-->
-<!--                    <div class="details"><span>Ram 4 Cpu i5  Gpu 2G</span></div>-->
-<!--                    <div class="price">-->
-<!--                       <h3>10میلیون</h3><h3>iman</h3>-->
-<!--                    </div>-->
-<!--                    <div class="btn">-->
-<!--                        <button class="btn-details">مشخصات</button>-->
-<!--                        <button class="btn-addCart">افزودن به سبد خرید</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <!--            <div class="product">-->
+            <!--                <div class="existence-discount">-->
+            <!--                    <div class="existence"><span><i class="icofont-check-alt"></i></span></div>-->
+            <!--                    <div class="discount"><span>5%</span></div>-->
+            <!--                    <div class="like"><span><i class="icofont-heart"></i></span></div>-->
+            <!--                </div>-->
+            <!--                <div class="img-price">-->
+            <!--                    <div class="img">-->
+            <!--                        <img src="productImg/kala1.jpg" alt="laptop">-->
+            <!--                    </div>-->
+            <!--                    <div class="details"><span>Ram 4 Cpu i5  Gpu 2G</span></div>-->
+            <!--                    <div class="price">-->
+            <!--                       <h3>10میلیون</h3><h3>iman</h3>-->
+            <!--                    </div>-->
+            <!--                    <div class="btn">-->
+            <!--                        <button class="btn-details">مشخصات</button>-->
+            <!--                        <button class="btn-addCart">افزودن به سبد خرید</button>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
 
     </section>
+    <section id="showProductDiscount" class="section-product">
+        <div class="title"><h1>تخفیف و از دست نده :) </h1></div>
+        <div id="containerProductDiscount" class="containerProduct">
+
+
+        </div>
+    </section>
+
     <section id="productRefrigerator" class="section-product">
         <div class="title"><h1>یخچال</h1></div>
         <div id="containerProductRefrigerator" class="containerProduct">
@@ -91,28 +126,40 @@
         <div id="containerProductCleaner" class="containerProduct">
         </div>
     </section>
+    <footer id="footer">
+        <div id="containerFooter">
+            <h5>تمامی حقوق این سایت متعلق به ایمان نورالهی می باشد. </h5>
+            <div class="p">
+               <a href="#"><i class="icofont-telegram"></i></a>
+                <a href="#"><i class="icofont-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 </div>
 <div class="modal-parent">
-<div class="modal">
-    <span class="X"><i class="icofont-error"></i></span>
-    <h5>برای افزودن محصول به سبد خرید ثبت نام / ورود کنید</h5>
-    <div class="login">
-        <div class="btnLogin">
-            <a href="registerUser.html">ورود / ثبت نام</a><span><i class="icofont-ui-user"></i></span>
+    <div class="modal">
+        <span class="X"><i class="icofont-error"></i></span>
+        <h5>برای افزودن محصول به سبد خرید ثبت نام / ورود کنید</h5>
+        <div class="login">
+            <div class="btnLogin">
+                <a href="registerUser.html">ورود / ثبت نام</a><span><i class="icofont-ui-user"></i></span>
+            </div>
         </div>
     </div>
 </div>
-</div>
 <div class="showKala">
     <div class="menuBar-kala">
-    <span class="spanClosedShow"><i class="icofont-error"></i></span>
+        <span class="spanClosedShow"><i class="icofont-error"></i></span>
         <ul>
             <li><a href="#containerProductLapTop">لپ تاپ</a></li>
-            <li><a href="#containerProductRefrigerator">یخچال</a></li>
-            <li><a href="#containerProductCleaner">جارو برقی</a></li>
+            <li><a href="#containerProductRefrigerator" class="iman">لوازم برقی</a>
+                <ul id="iman">
+                    <li><a href="">یخچال</a></li>
+                    <li><a href="">جارو برقی</a></li>
+                </ul>
+
+            </li>
         </ul>
-
-
     </div>
 </div>
 </body>
