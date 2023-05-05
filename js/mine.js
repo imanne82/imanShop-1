@@ -4,6 +4,7 @@
 let containerProductLapTop = document.querySelector('#containerProductLapTop')
 let containerProductRefrigerator = document.querySelector('#containerProductRefrigerator')
 let containerProductCleaner = document.querySelector('#containerProductCleaner')
+let showProductDiscount = document.querySelector('#containerProductDiscount')
 const yes = 'icofont-check-alt'
 const no = 'icofont-error'
 let listProduct = [
@@ -263,14 +264,20 @@ productLapTop.forEach(function (laptop) {
 let productRefrigerator = listProduct.filter(function (product) {
     return product.grouping === 'refrigerator'
 })
-let productCleaner = listProduct.filter(function (product) {
-    return product.grouping === 'cleaner'
-})
 productRefrigerator.forEach(function (refrigerator) {
     templateProduct(containerProductRefrigerator, refrigerator)
 })
+let productCleaner = listProduct.filter(function (product) {
+    return product.grouping === 'cleaner'
+})
 productCleaner.forEach(function (cleaner) {
     templateProduct(containerProductCleaner, cleaner)
+})
+let productDiscount = listProduct.filter(function (discount) {
+    return discount.discount !== '0%' && discount.existence === yes
+})
+productDiscount.forEach(function (productDiscount) {
+    templateProduct(showProductDiscount, productDiscount)
 })
 
 function templateProduct(container, product) {
@@ -329,26 +336,46 @@ function btnBodyClos(e) {
 btnClosedModal.addEventListener('click', btnClosed)
 body.addEventListener('keyup', btnBodyClos)
 
+//                      showMenuBarMO               //
+let showMenuBarMO = document.querySelector('#showMenuBarMO')
+let menuBarMo = document.querySelector('.menuBarMo')
+let icon = document.querySelector('.icofont-justify-all')
+let flagShow = false
+showMenuBarMO.addEventListener('click', function () {
+    if (flagShow) {
+        icon.className = 'icofont-justify-all'
+        menuBarMo.style.display = 'none'
+        flagShow = false
+    } else if (!flagShow){
+        menuBarMo.style.display = 'block'
+        flagShow = true
+        icon.className = 'icofont-error'
+    }
+
+})
 
 
 //                       //                 دسته بندی کالا
 
 
-
-
 let btnKala = document.querySelector('#kala')
 let showKala = document.querySelector('.showKala')
 let btnClosedShowKala = document.querySelector('.spanClosedShow')
+
 function showKalaHandler(event) {
     event.preventDefault()
     showKala.style.display = 'block'
     divContainer.style.filter = 'blur(10px)'
+
+
 }
-function closedKalaHandler(){
+
+function closedKalaHandler() {
     showKala.style.display = 'none'
     divContainer.style.filter = 'blur(0)'
+
 }
+
 btnKala.addEventListener('click', showKalaHandler)
 btnClosedShowKala.addEventListener('click', closedKalaHandler)
-
 

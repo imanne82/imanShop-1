@@ -7,7 +7,6 @@ let imgSrcArray = ['image/1.jpg', 'image/2.png', 'image/3.jpg']
 let count = 0
 let circle = $.querySelectorAll('.circle')
 circle[0].classList.add('active')
-
 function preImgSlider() {
     circle[count].classList.remove('active')
     count++
@@ -32,7 +31,7 @@ function nextImgSlider() {
     imgTagSlider.src = imgSrcArray[count]
 }
 
-// setInterval(preImgSlider, 5000)
+setInterval(preImgSlider, 5000)
 btnRight.addEventListener('click', nextImgSlider)
 btnLeft.addEventListener('click', preImgSlider)
 

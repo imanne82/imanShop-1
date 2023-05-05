@@ -63,6 +63,15 @@ header {
     border-radius: 5px;
 }
 
+.btnLogin:hover {
+    background-color: black;
+    color: white;
+}
+
+.btnLogin:hover a {
+    color: white;
+}
+
 .btnLogin a {
     padding: 10px;
     width: 8rem;
@@ -70,8 +79,67 @@ header {
     color: var(--txtColor);
 }
 
-.menuBar {
+.menuBar #showMenuBarMO {
+    color: white;
+    font-size: 20px;
     display: none;
+}
+
+.menuBarMo {
+    z-index: 1 !important;
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    display: none;
+}
+
+.menuBarMo .menuMO {
+    box-shadow: 0 0 10px;
+    width: 100%;
+    height: 100%;
+    top: 9px;
+    left: 10%;
+    position: relative;
+    background: white;
+    animation: showMenu 1s ease-in;
+}
+
+@keyframes showMenu {
+    0% {
+        left: 150px;
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+.menuBarMo .menuMO ul li {
+    border: 1px solid var(--bgColor);
+    padding: 10px;
+}
+
+.menuBarMo .menuMO ul li a {
+    color: var(--txtColor);
+
+}
+
+.menuBarMo .menuMO ul li > ul {
+    font-size: 18px;
+    width: 100%;
+    background: var(--bgColor);
+}
+
+.menuBarMo .menuMO ul li > ul li a {
+    color: black;
+}
+
+.menuBarMo .menuMO ul li > ul li > ul a {
+    font-size: 15px;
+    color: white;
+}
+
+#showMenuBarMO .icofont-error {
+    color: red;
 }
 
 /*                       navBar                     */
@@ -93,6 +161,9 @@ header {
     margin-right: 1rem;
 }
 
+#navBar .listMenu li a:hover {
+    text-shadow: 0 0 1px var(--txtColor);
+}
 
 /*                       slider                     */
 #sliderSite {
@@ -141,7 +212,7 @@ header {
 }
 
 .active {
-    background-color: var(--bgColor2) !important;
+    background-color: black !important;
 }
 
 
@@ -171,6 +242,11 @@ header {
     height: 20rem;
     border-radius: 20px;
     background: var(--bgColor);
+    box-shadow: 2px 2px 10px var(--bgColor);
+}
+
+.product:hover {
+    transform: scale(1.1);
 }
 
 .img-price {
@@ -247,6 +323,10 @@ header {
 
 .icofont-check-alt {
     color: green;
+}
+
+#showProductDiscount {
+    background-color: white;
 }
 
 /*                modal                    */
@@ -373,16 +453,28 @@ header {
     display: none;
 }
 
+
 .menuBar-kala {
-    top: 50%;
-    right: 25%;
-    background-color: var(--bgColor);
-    width: 50%;
+    top: 10rem;
+    right: 35%;
+    background-color: white;
+    width: 23%;
     position: relative;
-    height: 5rem;
+    height: 16rem;
     border-radius: 20px;
-    animation: 0.5s drop;
+    box-shadow: -2px -1px 10px black;
+    animation: 0.5s show;
 }
+
+@keyframes show {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 10%;
+    }
+}
+
 
 .menuBar-kala ul {
     width: 100%;
@@ -392,9 +484,44 @@ header {
     align-items: center;
 }
 
+.menuBar-kala ul li > ul {
+    box-shadow: 1px 1px 10px var(--bgColor);
+    background-color: var(--txtColor);
+    width: 7rem;
+    height: 11rem;
+    position: absolute;
+    top: 4rem;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.menuBar-kala ul li > ul li {
+    margin-top: 10px;
+    width: 100%;
+    height: 2.2rem;
+}
+
+.menuBar-kala ul li > ul li a:hover {
+    display: block;
+    color: black;
+    background-color: yellow;
+}
+
+.menuBar-kala ul li > ul li a {
+    font-size: 15px;
+    color: #f1f1f1;
+}
+
+.menuBar-kala ul li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
 .menuBar-kala a {
     font-size: 20px;
-    color: var(--bgColor2);
+    color: var(--txtColor);
 }
 
 .showKala span {
@@ -402,3 +529,28 @@ header {
     margin: 1rem;
     font-size: 20px;
 }
+
+
+/*                  footer                       */
+#footer {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--bgColor);
+}
+
+#containerFooter {
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#containerFooter .p a {
+    color: #f1f1f1;
+    margin-right: 1rem;
+    font-size: 23px;
+}
+
+
