@@ -101,12 +101,12 @@ header {
     left: 10%;
     position: relative;
     background: white;
-    animation: showMenu 1s ease-in;
+    animation: showMenu .5s ease-in;
 }
 
 @keyframes showMenu {
     0% {
-        left: 150px;
+        left: 200px;
     }
     100% {
         left: 10%;
